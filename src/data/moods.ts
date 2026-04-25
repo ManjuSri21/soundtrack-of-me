@@ -105,8 +105,8 @@ export const MOODS: Mood[] = [
       glow: "shadow-[0_0_60px_rgba(168,85,247,0.18)]"
     },
     song: {
-      title: "Kannazhaga",
-      artist: "Anirudh Ravichander",
+      title: "Kaadhal Rojave",
+      artist: "S P Balasubramaniam",
       src: "/audio/latenight.mp3"
     }
   }
