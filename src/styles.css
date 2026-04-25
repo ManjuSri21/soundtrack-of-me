@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #0b0b14;
+  color: rgb(226 232 240);
+  overflow-x: hidden;
+}
+
+/* Smooth scroll (paired with JS scrollIntoView) */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Subtle animated noise overlay */
+.noise::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.28'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+  opacity: 0.08;
+}
+
+/* Accessible focus ring */
+:focus-visible {
+  outline: 2px solid rgba(168, 85, 247, 0.8);
+  outline-offset: 3px;
+}
+
+/* Equalizer bars animation */
+@keyframes eq {
+  0% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0.35);
+  }
+}
+
+.eq-bar {
+  transform-origin: bottom;
+  animation: eq 900ms ease-in-out infinite;
+}
+
+/* A lightweight wave glow */
+@keyframes drift {
+  0% {
+    transform: translate3d(-5%, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(5%, -2%, 0) scale(1.02);
+  }
+  100% {
+    transform: translate3d(-5%, 0, 0) scale(1);
+  }
+}
+
+.wave {
+  animation: drift 9s ease-in-out infinite;
+}
+
