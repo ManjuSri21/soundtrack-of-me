@@ -77,23 +77,7 @@ Optional background track:
 - Stored in the browser using `localStorage`
 - Code lives in `src/lib/storage.ts`
 
-## Build for production
+Project Live URL : https://soundtrack-of-me-git-main-manjusriit23-3989s-projects.vercel.app/
 
-```bash
-npm run build
-npm run preview
-```
 
-## Deploy
-
-This is a static Vite build (output: `dist/`). You can deploy to:
-
-- GitHub Pages
-- Netlify
-- Vercel
-- Any static hosting
-
-## License
-
-If you plan to publish this, make sure you only use audio files you have permission to use.
 
